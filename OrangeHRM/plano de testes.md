@@ -7,7 +7,7 @@
 * **Ambiente de Testes**: [https://opensource-demo.orangehrmlive.com](https://opensource-demo.orangehrmlive.com)
 * **Tipo de Teste**: Teste Funcional Manual
 * **Data do Documento**: 10/05/2025
-* **Responsável**: QA Manual (você pode colocar seu nome aqui)
+* **Responsável**: Miguel Luis
 
 ---
 
