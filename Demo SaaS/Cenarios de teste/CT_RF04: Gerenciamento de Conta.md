@@ -1,5 +1,5 @@
 # 🧪 Plano de Testes Manuais - Demo SaaS  
-> Funcionalidade: Autenticação de Usuário  
+> Funcionalidade: Gerenciar informações da conta do usuário 
 > Sistema: [Demo SaaS](https://demo-saas.bugbug.io/)  
 > Autor: Miguel Luis  
 > Data: 2025-05-18  
