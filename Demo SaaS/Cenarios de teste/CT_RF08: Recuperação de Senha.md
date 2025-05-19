@@ -6,7 +6,7 @@
 
 ---
 
-## Cenário 01: Recuperação de senha pelo email cadastrado
+## Cenário 08: Recuperação de senha pelo email cadastrado
 
 ### Caso de Teste 01: Solicitar recuperação de senha com email válido (Happy Path)
 
