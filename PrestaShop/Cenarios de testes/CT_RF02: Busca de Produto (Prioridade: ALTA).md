@@ -1,5 +1,5 @@
-# 🧪 Plano de Testes Manuais - Demo SaaS  
-> Funcionalidade: Autenticação de Usuário  
+# 🧪 Plano de Testes Manuais - Presta Shop 
+> Funcionalidade: Busca de Produto (Prioridade: ALTA)  
 > Sistema: [Presta Shop](https://demo.prestashop.com/#/en/front)  
 > Autor: Miguel Luis  
 > Data: 2025-06-09  
