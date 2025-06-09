@@ -6,9 +6,6 @@
 
 ---
 
-
----
-
 ## Cenário 04.1: Visualizar informações de um produto simples
 
 ### Caso de Teste 01: Exibir dados completos do produto simples na PDP
