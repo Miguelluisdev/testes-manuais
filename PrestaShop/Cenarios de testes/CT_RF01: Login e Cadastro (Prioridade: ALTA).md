@@ -1,4 +1,4 @@
-# 🧪 Plano de Testes Manuais - Demo SaaS  
+# 🧪 Plano de Testes Manuais - Presta Shop  
 > Funcionalidade: Autenticação de Usuário  
 > Sistema: [Presta Shop](https://demo.prestashop.com/#/en/front)  
 > Autor: Miguel Luis  
