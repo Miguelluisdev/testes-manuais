@@ -106,6 +106,6 @@
 ---
 
 ✍️ **Autor da Análise:** Miguel Luis
-📅 **Data:** 09/06/2025  
+📅 **Data:** 15/06/2025  
 🧪 **Metodologia:** RCA via observação + inferência técnica
 
