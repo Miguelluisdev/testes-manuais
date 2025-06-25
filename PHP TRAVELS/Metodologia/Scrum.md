@@ -70,4 +70,4 @@ O **PHPTRAVELS** é um sistema de gerenciamento de viagens online. Este reposit�
 
 ---
 
-🧩 *“Qualidade não é responsabilidade de uma pessoa só, é do time todo.”*
+🧩 *“Qualidade não é responsabilidade de uma pessoa só, é do time todo.”* - considerações: https://www.linkedin.com/in/wesley-leal-siqueira-523b5b178/
