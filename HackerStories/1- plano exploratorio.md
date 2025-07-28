@@ -83,20 +83,6 @@ Baseado nas **10 Heurísticas de Usabilidade de Jakob Nielsen**, adaptadas para 
 * **Responsively App** ou modo "Mobile" do navegador
 * **Ferramentas de rede** para simular lentidão e quedas
 
----
-
-### ✅ Registro de Descobertas (Modelo)
-
-| Tipo              | Descrição                                                             |
-| ----------------- | --------------------------------------------------------------------- |
-| 🐞 Bug            | Notícia abre na mesma aba, impedindo voltar ao site                   |
-| ⚠️ UX             | Ausência de feedback de carregamento ao rolar a página                |
-| 💡 Ideia          | Adicionar botão de “voltar ao topo”                                   |
-| 🤯 Erro           | Desconectar a internet resulta em tela em branco sem mensagem de erro |
-| 📱 Responsividade | Layout quebra em dispositivos com resolução 360x640                   |
-
----
-
 ### 📌 Conclusão
 
 Esse plano usa heurísticas para **avaliar a qualidade da experiência do usuário além do funcional**, identificando falhas de comunicação, design, acessibilidade e navegação. Ideal para testes exploratórios com foco em **UX e valor para o usuário final**.
