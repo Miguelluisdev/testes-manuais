@@ -1,250 +1,210 @@
-# 🔐 Testes de Privacidade e LGPD — PHPTRAVELS.NET
+# 🧩 Testes de Privacidade e Conformidade com a LGPD
 
-## 🧾 Cenário 1 — Consentimento para Coleta de Dados Pessoais
+## 🧾 Objetivo
 
-**Descrição:**
-Verificar se o sistema solicita o consentimento explícito do usuário para o uso de dados pessoais antes do cadastro ou envio de formulários.
-
-**Tipo de Teste:** Privacidade / LGPD — Consentimento
-**Prioridade:** Alta
-**Dados de teste:**
-
-* Nome: “João Teste”
-* Email: [joao@teste.com](mailto:joao@teste.com)
-* Senha: 12345678
-
-**Passos:**
-
-1. Acessar “My Account” > “Sign Up”.
-2. Preencher os campos obrigatórios.
-3. Procurar por checkbox ou texto informando sobre o uso dos dados pessoais.
-4. Tentar concluir o cadastro sem marcar o consentimento (caso exista).
-
-**Resultado Esperado:**
-
-* O sistema deve solicitar consentimento antes do envio do formulário.
-* Caso o usuário não aceite, o cadastro não deve ser concluído.
-* O texto deve explicar claramente a finalidade da coleta (“para criação e gestão da conta de usuário”).
-
-**Resultado Obtido:**
-*Aguardando execução.*
+Garantir que o sistema **PHPTravels** ([https://phptravels.net/](https://phptravels.net/)) esteja em conformidade com os princípios e exigências da **LGPD (Lei Geral de Proteção de Dados – Lei nº 13.709/2018)**, assegurando que os **dados pessoais** dos usuários sejam coletados, tratados e armazenados de forma **segura, legítima e transparente**.
 
 ---
 
-## 🧾 Cenário 2 — Exibição de Política de Privacidade
+## ⚙️ Escopo
 
-**Descrição:**
-Verificar se há um link visível e acessível para a Política de Privacidade em todas as páginas do site.
+Estes testes cobrem:
 
-**Tipo de Teste:** Privacidade / LGPD — Transparência
-**Prioridade:** Alta
+* Coleta, consentimento e finalidade de uso de dados pessoais
+* Direito à informação, portabilidade e exclusão
+* Segurança, armazenamento e tratamento de dados sensíveis
+* Gerenciamento de cookies e sessões
+* Transparência na política de privacidade
 
+---
+
+## 🧪 Casos de Teste Detalhados
+
+### **CT-LGPD-01 – Exibição da Política de Privacidade**
+
+**Descrição:** Verificar se o site possui política de privacidade acessível, clara e atualizada.
+**Pré-condição:** Usuário acessa o site principal.
 **Passos:**
 
 1. Acessar a página inicial.
-2. Rolar até o rodapé (footer).
-3. Procurar o link “Privacy Policy” ou “Política de Privacidade”.
-4. Clicar no link e verificar se o documento é exibido corretamente.
+2. Rolar até o rodapé.
+3. Localizar o link “Privacy Policy” ou equivalente.
+4. Clicar e verificar o conteúdo exibido.
+   **Critério de Aceitação:**
 
-**Resultado Esperado:**
-
-* O link deve estar presente em todas as páginas (footer).
-* O conteúdo deve explicar claramente como os dados são coletados, usados e armazenados.
-* Deve conter informações de contato do controlador de dados.
-
-**Resultado Obtido:**
-*Aguardando execução.*
+* A política deve estar visível e facilmente acessível.
+* Deve explicar como os dados são coletados e utilizados.
+* Deve citar conformidade com a LGPD.
+  **Risco e Impacto:**
+  🔴 *Alta gravidade*: ausência de política clara pode gerar **multas da ANPD**, **perda de credibilidade** e **não conformidade legal**.
 
 ---
 
-## 🧾 Cenário 3 — Solicitação de Exclusão de Conta (Direito de Exclusão)
+### **CT-LGPD-02 – Consentimento de Coleta de Dados**
 
-**Descrição:**
-Garantir que o usuário consiga solicitar a exclusão de seus dados pessoais (direito ao esquecimento).
-
-**Tipo de Teste:** Privacidade / LGPD — Direito do Titular
-**Prioridade:** Alta
+**Descrição:** Verificar se o site solicita consentimento antes de coletar dados (cookies, formulários, rastreamento).
+**Pré-condição:** Primeira visita ao site (sem cookies salvos).
 **Passos:**
 
-1. Fazer login no sistema.
-2. Acessar “My Profile” ou “Account Settings”.
-3. Verificar se existe opção “Delete Account” ou formulário de contato para solicitar exclusão.
-4. Clicar na opção e confirmar a solicitação.
+1. Limpar cookies do navegador.
+2. Acessar o site.
+3. Verificar se aparece banner ou modal de consentimento.
+4. Testar opções “Aceitar” e “Recusar”.
+   **Critério de Aceitação:**
 
-**Resultado Esperado:**
-
-* O sistema deve exibir mensagem de confirmação (“Sua conta será excluída permanentemente”).
-* Dados do usuário devem ser removidos da base após confirmação.
-* O site deve indicar um prazo ou canal de confirmação do processo.
-
-**Resultado Obtido:**
-*Aguardando execução.*
+* O sistema deve pedir consentimento explícito antes da coleta.
+* Deve permitir recusa sem bloquear o uso básico do site.
+  **Risco e Impacto:**
+  🔴 *Alta gravidade*: coleta de dados sem consentimento pode causar **multas de até 2% do faturamento** e **violação direta da LGPD**.
 
 ---
 
-## 🧾 Cenário 4 — Máscara e Segurança de Campos Sensíveis
+### **CT-LGPD-03 – Transparência na Coleta de Dados**
 
-**Descrição:**
-Verificar se campos de senha e dados sensíveis estão mascarados e protegidos.
-
-**Tipo de Teste:** Privacidade / LGPD — Segurança
-**Prioridade:** Alta
-
+**Descrição:** Verificar se os formulários informam claramente a finalidade do uso dos dados.
+**Pré-condição:** Página de cadastro ou contato disponível.
 **Passos:**
 
-1. Acessar página de Login e Cadastro.
-2. Observar o campo “Password”.
-3. Digitar senha e verificar se os caracteres estão mascarados (••••••).
-4. Verificar se não é possível ver a senha via código-fonte (HTML).
+1. Acessar o formulário de cadastro.
+2. Verificar textos explicativos sobre uso dos dados.
+   **Critério de Aceitação:**
 
-**Resultado Esperado:**
-
-* Campos de senha mascarados visualmente.
-* Nenhum dado sensível (senha, token, CPF, e-mail) exposto no código-fonte ou em URLs.
-* Página deve utilizar HTTPS.
-
-**Resultado Obtido:**
-*Aguardando execução.*
+* O formulário deve informar a finalidade (ex: “Seu e-mail será usado para envio de confirmação”).
+  **Risco e Impacto:**
+  🟠 *Média*: ausência de transparência compromete a **confiança do usuário** e caracteriza **tratamento indevido de dados**.
 
 ---
 
-## 🧾 Cenário 5 — Proteção contra Exposição de Dados em URL
+### **CT-LGPD-04 – Direito de Acesso e Portabilidade**
 
-**Descrição:**
-Validar se informações pessoais não aparecem em URLs durante o uso do sistema.
-
-**Tipo de Teste:** Privacidade / LGPD — Segurança da Informação
-**Prioridade:** Média
-
+**Descrição:** Verificar se o usuário pode visualizar ou exportar seus dados pessoais.
+**Pré-condição:** Usuário logado e com dados cadastrados.
 **Passos:**
 
-1. Realizar login no sistema.
-2. Acessar o perfil de usuário e as reservas.
-3. Observar a URL exibida no navegador.
+1. Acessar configurações da conta.
+2. Procurar opção “Meus dados” ou “Exportar informações”.
+   **Critério de Aceitação:**
 
-**Resultado Esperado:**
-Nenhum dado sensível (e-mail, nome, ID de sessão, token) deve estar visível na URL.
-
-**Resultado Obtido:**
-*Aguardando execução.*
+* O sistema deve permitir visualizar ou exportar dados pessoais.
+  **Risco e Impacto:**
+  🟠 *Média*: impossibilidade de acesso viola o **art. 18 da LGPD** e prejudica o **direito do titular**.
 
 ---
 
-## 🧾 Cenário 6 — Retirada de Consentimento (Opt-out)
+### **CT-LGPD-05 – Direito à Exclusão (Opt-out)**
 
-**Descrição:**
-Verificar se o usuário pode revogar o consentimento para uso de dados pessoais.
+**Descrição:** Verificar se o usuário pode excluir sua conta e apagar dados pessoais.
+**Pré-condição:** Conta ativa e logada.
+**Passos:**
 
-**Tipo de Teste:** Privacidade / LGPD — Direito de Revogação
-**Prioridade:** Média
+1. Acessar o perfil.
+2. Buscar opção “Excluir conta”.
+3. Confirmar exclusão e verificar resultado.
+   **Critério de Aceitação:**
 
+* Sistema deve excluir permanentemente os dados pessoais.
+* Mensagem de confirmação deve ser exibida.
+  **Risco e Impacto:**
+  🔴 *Alta gravidade*: retenção indevida após solicitação de exclusão é **infração grave** sujeita a **sanções legais**.
+
+---
+
+### **CT-LGPD-06 – Proteção de Dados Sensíveis**
+
+**Descrição:** Verificar se dados sensíveis (senha, CPF, cartão) são protegidos e não expostos.
+**Pré-condição:** Usuário envia dados pessoais em formulário.
+**Passos:**
+
+1. Analisar requisições de rede no navegador.
+2. Verificar se tráfego é HTTPS.
+3. Confirmar se senhas são mascaradas e não aparecem em logs/URLs.
+   **Critério de Aceitação:**
+
+* Dados sensíveis devem trafegar criptografados.
+* Senhas nunca devem aparecer em texto simples.
+  **Risco e Impacto:**
+  🔴 *Alta gravidade*: exposição de dados pode gerar **vazamento**, **danos à imagem** e **responsabilidade civil**.
+
+---
+
+### **CT-LGPD-07 – Revogação de Consentimento**
+
+**Descrição:** Verificar se o usuário pode revogar consentimento já concedido.
+**Pré-condição:** Consentimento ativo.
+**Passos:**
+
+1. Acessar painel de privacidade.
+2. Selecionar opção “Revogar consentimento”.
+3. Confirmar revogação.
+   **Critério de Aceitação:**
+
+* Sistema deve permitir revogação simples e eficaz.
+  **Risco e Impacto:**
+  🟠 *Média*: ausência de revogação pode resultar em **tratamento indevido** e **reclamações formais** à ANPD.
+
+---
+
+### **CT-LGPD-08 – Retenção e Exclusão de Logs**
+
+**Descrição:** Verificar se há política de retenção e exclusão de logs de usuários.
+**Pré-condição:** Política de privacidade publicada.
+**Passos:**
+
+1. Consultar política de privacidade.
+2. Identificar período de retenção e procedimento de exclusão.
+   **Critério de Aceitação:**
+
+* Logs devem ter prazo máximo de retenção informado.
+  **Risco e Impacto:**
+  🟡 *Baixa*: ausência de informação reduz **transparência**, mas não afeta diretamente a segurança.
+
+---
+
+### **CT-LGPD-09 – Consentimento para Cookies de Terceiros**
+
+**Descrição:** Verificar se o site informa e solicita consentimento antes de usar cookies de terceiros (Google, Meta, etc.).
+**Pré-condição:** Primeira visita ao site.
+**Passos:**
+
+1. Limpar cookies.
+2. Acessar o site e inspecionar cookies criados.
+3. Verificar se cookies de terceiros são ativados sem consentimento.
+   **Critério de Aceitação:**
+
+* Cookies externos só devem ser ativados após consentimento.
+  **Risco e Impacto:**
+  🔴 *Alta gravidade*: ativação automática sem aviso viola **LGPD e GDPR**, podendo gerar **multa imediata**.
+
+---
+
+### **CT-LGPD-10 – Segurança de Sessão**
+
+**Descrição:** Garantir que sessões de usuários expirem após período de inatividade.
+**Pré-condição:** Usuário logado.
 **Passos:**
 
 1. Fazer login.
-2. Acessar configurações de conta ou notificações.
-3. Verificar se há opção de “Revogar consentimento” ou “Desativar comunicações”.
-4. Ativar a opção e salvar.
+2. Permanecer inativo por 15–30 minutos.
+3. Verificar se a sessão expira automaticamente.
+   **Critério de Aceitação:**
 
-**Resultado Esperado:**
-
-* Consentimento é revogado.
-* O sistema deve parar de enviar comunicações automáticas (ex: e-mails promocionais).
-* Usuário deve ser informado sobre as consequências da revogação.
-
-**Resultado Obtido:**
-*Aguardando execução.*
+* Sessão deve encerrar e exigir novo login.
+  **Risco e Impacto:**
+  🟠 *Média*: sessão ilimitada expõe risco de **uso indevido de conta** ou **sequestro de sessão**.
 
 ---
 
-## 🧾 Cenário 7 — Acesso aos Dados Pessoais (Direito de Acesso)
+## 🧭 Priorização dos Testes
 
-**Descrição:**
-Garantir que o usuário possa visualizar todas as informações pessoais armazenadas sobre ele.
-
-**Tipo de Teste:** Privacidade / LGPD — Direito do Titular
-**Prioridade:** Alta
-
-**Passos:**
-
-1. Fazer login.
-2. Acessar “My Profile” ou seção de dados pessoais.
-3. Verificar se todas as informações cadastradas (nome, e-mail, telefone, reservas) são exibidas de forma completa e legível.
-
-**Resultado Esperado:**
-
-* Usuário tem acesso a todos os dados pessoais que o sistema mantém sobre ele.
-* Informações são exibidas de forma clara e organizada.
-
-**Resultado Obtido:**
-*Aguardando execução.*
-
----
-
-## 🧾 Cenário 8 — Solicitação de Correção de Dados
-
-**Descrição:**
-Verificar se o usuário pode corrigir ou atualizar dados pessoais incorretos.
-
-**Tipo de Teste:** Privacidade / LGPD — Retificação de Dados
-**Prioridade:** Média
-
-**Passos:**
-
-1. Fazer login.
-2. Acessar “My Profile”.
-3. Editar informações incorretas (ex: número de telefone).
-4. Salvar alterações.
-
-**Resultado Esperado:**
-
-* Dados são atualizados com sucesso.
-* Sistema exibe mensagem “Dados atualizados com sucesso”.
-
-**Resultado Obtido:**
-*Aguardando execução.*
-
----
-
-## 🧾 Cenário 9 — Retenção e Minimização de Dados
-
-**Descrição:**
-Verificar se o sistema armazena apenas dados necessários para o funcionamento da conta.
-
-**Tipo de Teste:** Privacidade / LGPD — Minimização de Dados
-**Prioridade:** Baixa
-
-**Passos:**
-
-1. Realizar cadastro.
-2. Observar os campos obrigatórios.
-3. Verificar se há solicitação de dados excessivos (ex: CPF, endereço completo, documento).
-
-**Resultado Esperado:**
-O sistema deve solicitar apenas dados essenciais (nome, e-mail, telefone, senha).
-
-**Resultado Obtido:**
-*Aguardando execução.*
-
----
-
-## 🧾 Cenário 10 — Logs e Rastreamento de Sessão
-
-**Descrição:**
-Verificar se o sistema não armazena cookies ou logs indevidos sem consentimento.
-
-**Tipo de Teste:** Privacidade / LGPD — Segurança e Consentimento
-**Prioridade:** Baixa
-
-**Passos:**
-
-1. Acessar o site em modo anônimo.
-2. Observar se há aviso de uso de cookies.
-3. Verificar se cookies são criados antes do consentimento.
-
-**Resultado Esperado:**
-
-* Banner de cookies deve aparecer na primeira visita.
-* Nenhum cookie de rastreamento deve ser criado antes do consentimento.
-
-**Resultado Obtido:**
-*Aguardando execução.*
+| ID         | Prioridade | Gravidade | Risco/Impacto                                |
+| ---------- | ---------- | --------- | -------------------------------------------- |
+| CT-LGPD-01 | Alta       | Alta      | Falta de política → não conformidade legal   |
+| CT-LGPD-02 | Alta       | Alta      | Coleta sem consentimento → multa e bloqueio  |
+| CT-LGPD-03 | Alta       | Média     | Falta de transparência → tratamento indevido |
+| CT-LGPD-04 | Média      | Média     | Impede direito do titular                    |
+| CT-LGPD-05 | Alta       | Alta      | Retenção indevida → infração grave           |
+| CT-LGPD-06 | Alta       | Alta      | Vazamento → dano à imagem e sanções          |
+| CT-LGPD-07 | Média      | Média     | Revogação ausente → uso indevido             |
+| CT-LGPD-08 | Baixa      | Baixa     | Falta de retenção → perda de transparência   |
+| CT-LGPD-09 | Alta       | Alta      | Cookies sem consentimento → infração direta  |
+| CT-LGPD-10 | Média      | Média     | Sessão aberta → risco de sequestro           |
