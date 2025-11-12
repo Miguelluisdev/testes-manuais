@@ -94,6 +94,4 @@ A Parte 3 se **integra diretamente** às demais partes da norma:
 ## 🧠 Conclusão
 
 A **ISO/IEC/IEEE 29119-3** é essencial para garantir **padronização, rastreabilidade e qualidade documental** nos processos de teste.
-Mais do que exigir “papelada”, ela propõe uma estrutura **adaptável e inteligente**, que pode ser moldada conforme a **realidade de cada projeto e metodologia** — desde empresas ágeis até corporações que precisam atender **requisitos regulatórios rigorosos**.
-
-> 🧩 **Em resumo:** documentar bem é testar com clareza, e testar com clareza é garantir qualidade e confiança no produto final.
+Mais do que exigir “papelada”, ela propõe uma estrutura **adaptável e inteligente**, que pode ser moldada conforme a **realidade de cada projeto e metodologia** — desde empresas ágeis até corporações que precisam atender **requisitos regulatórios rigorosos**..
